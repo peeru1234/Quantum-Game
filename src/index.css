@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Rajdhani', sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #030509;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-mono-sci {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Custom Hologram Effects */
+.hologram-glow {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.8), 0 0 20px rgba(0, 243, 255, 0.4), 0 0 30px rgba(0, 102, 255, 0.3);
+}
+
+.hologram-box {
+  background: linear-gradient(135deg, rgba(0, 243, 255, 0.08) 0%, rgba(10, 20, 40, 0.75) 100%);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: inset 0 0 15px rgba(0, 243, 255, 0.1), 0 0 20px rgba(0, 243, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.hologram-box-pink {
+  background: linear-gradient(135deg, rgba(255, 0, 160, 0.08) 0%, rgba(30, 10, 40, 0.75) 100%);
+  border: 1px solid rgba(255, 0, 160, 0.4);
+  box-shadow: inset 0 0 15px rgba(255, 0, 160, 0.15), 0 0 20px rgba(255, 0, 160, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Dynamic Scanlines Overlay */
+.scanlines-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Custom Crosshair Pulsing */
+.reticle-pulse {
+  animation: reticlePulse 1.5s infinite ease-in-out;
+}
+
+@keyframes reticlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 8px #00f3ff); }
+}
